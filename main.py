@@ -34,7 +34,7 @@ class TorrentDownloader:
             params = {
                 'save_path': download_path,
                 'storage_mode': lt.storage_mode_t(2),
-                "paused": True
+                "paused": True,
                 'auto_managed': True,
                 'duplicate_is_error': True
             }
