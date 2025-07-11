@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: telegram-torrent-bot
+    env: docker
+    repo: https://github.com/Thunder5912/claude
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+    buildCommand: ""
+    startCommand: "python main.py"
+    plan: free
+    region: oregon
+    healthCheckPath: /
+    disk:
+      name: downloads
+      mountPath: /app/downloads
+      sizeGB: 5
